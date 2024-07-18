@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search meme by name">
+        <button id="search-button">Search</button>
+    </div>
+    <div class="meme-container">
+        <div class="current-meme">
+            <img id="meme-image" src="" alt="Meme">
+            <div id="meme-info">
+                <h2 id="meme-name"></h2>
+                <p>Captions: <span id="meme-captions"></span></p>
+            </div>
+            <button id="favorite-meme">Add to Favorite</button>
+            <button id="next-meme">Next Meme</button>
+        </div>
+        <div class="favorites-container">
+            <h2>Favorite Memes</h2>
+            <div id="favorites-list"></div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
