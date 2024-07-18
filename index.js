@@ -79,6 +79,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('favorites', JSON.stringify(favorites));
                 renderFavorites();
             };
+            function toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme); // Store the theme preference in localStorage
+            }
+            
+            // Check if there's a stored theme preference in localStorage and apply it
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            }
+            
+            // Toggle theme on button click
+            const toggleButton = document.getElementById('toggle-theme-button');
+            toggleButton.addEventListener('click', toggleTheme);
+            
         })
         .catch(error => console.error('Error fetching memes:', error));
 });
