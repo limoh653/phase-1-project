@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('favorites', JSON.stringify(favorites));
                 renderFavorites();
             };
-            function toggleTheme() {
+            /*function toggleTheme() {
                 const currentTheme = document.documentElement.getAttribute('data-theme');
                 const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Toggle theme on button click
             const toggleButton = document.getElementById('toggle-theme-button');
-            toggleButton.addEventListener('click', toggleTheme);
+            toggleButton.addEventListener('click',(e) => toggleTheme);*/
             
         })
         .catch(error => console.error('Error fetching memes:', error));
